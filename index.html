@@ -2,43 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biomolecules Quiz App</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
     }
 
     .container {
+      width: 80%;
       max-width: 800px;
       margin: 40px auto;
       background: white;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     }
 
     h1 {
       text-align: center;
-      color: #2c3e50;
-    }
-
-    .question-box {
-      margin-top: 25px;
+      color: #333;
     }
 
     .question {
-      font-size: 20px;
+      font-size: 22px;
+      margin-bottom: 20px;
       font-weight: bold;
-      margin-bottom: 15px;
     }
 
     .option {
-      display: block;
-      background: #ecf0f1;
+      background: #eee;
       padding: 12px;
       margin: 10px 0;
       border-radius: 8px;
@@ -47,88 +44,98 @@
     }
 
     .option:hover {
-      background: #d6eaf8;
+      background: #dcdcdc;
     }
 
     .correct {
-      background-color: #2ecc71 !important;
+      background: green !important;
       color: white;
     }
 
     .wrong {
-      background-color: #e74c3c !important;
+      background: red !important;
       color: white;
     }
 
-    .btn {
+    #nextBtn {
       margin-top: 20px;
       padding: 12px 20px;
       border: none;
-      background: #3498db;
+      background: #007bff;
       color: white;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 16px;
+      display: none;
     }
 
-    .btn:hover {
-      background: #2980b9;
+    #nextBtn:hover {
+      background: #0056b3;
     }
 
-    .score {
-      font-size: 22px;
+    #score {
       text-align: center;
+      font-size: 24px;
       margin-top: 20px;
       font-weight: bold;
-      color: #27ae60;
-    }
-
-    .loading {
-      text-align: center;
-      font-size: 18px;
-      color: #555;
+      color: green;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
+
     <h1>Biomolecules Quiz App</h1>
 
-    <div id="quiz-container">
-      <p class="loading">Loading questions...</p>
-    </div>
+    <div id="quiz"></div>
 
-    <button id="nextBtn" class="btn" style="display:none;">Next Question</button>
+    <button id="nextBtn">Next Question</button>
 
-    <div id="score" class="score"></div>
+    <div id="score"></div>
+
   </div>
 
   <script>
+
     let questions = [];
     let currentQuestion = 0;
     let score = 0;
     let answered = false;
 
-    const quizContainer = document.getElementById('quiz-container');
-    const nextBtn = document.getElementById('nextBtn');
-    const scoreContainer = document.getElementById('score');
+    const quiz = document.getElementById("quiz");
+    const nextBtn = document.getElementById("nextBtn");
+    const scoreDiv = document.getElementById("score");
 
     // Load JSON File
-    fetch('biomolecules_questions.json')
-      .then(response => response.json())
+    fetch("biomolecules_questions.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("JSON file not found");
+        }
+        return response.json();
+      })
       .then(data => {
+
         questions = [...data.part1, ...data.part2];
+
         loadQuestion();
+
       })
       .catch(error => {
-        quizContainer.innerHTML = '<p style="color:red;">Error loading JSON file.</p>';
+
         console.error(error);
+
+        quiz.innerHTML = `
+          <h2 style="color:red;">
+            Error Loading JSON File
+          </h2>
+        `;
       });
 
     function loadQuestion() {
+
       answered = false;
-      nextBtn.style.display = 'none';
+      nextBtn.style.display = "none";
 
       if (currentQuestion >= questions.length) {
         showScore();
@@ -137,65 +144,86 @@
 
       const q = questions[currentQuestion];
 
-      quizContainer.innerHTML = `
-        <div class="question-box">
-          <div class="question">
-            Q${currentQuestion + 1}. ${q.question}
-          </div>
-          <div id="options"></div>
+      quiz.innerHTML = `
+        <div class="question">
+          Q${currentQuestion + 1}. ${q.question}
         </div>
+
+        <div id="options"></div>
       `;
 
-      const optionsDiv = document.getElementById('options');
+      const optionsDiv = document.getElementById("options");
 
       q.options.forEach(option => {
-        const btn = document.createElement('div');
-        btn.classList.add('option');
+
+        const btn = document.createElement("div");
+
+        btn.classList.add("option");
+
         btn.innerText = option;
 
-        btn.addEventListener('click', () => checkAnswer(btn, option, q.answer));
+        btn.addEventListener("click", () => {
+          checkAnswer(btn, option, q.answer);
+        });
 
         optionsDiv.appendChild(btn);
+
       });
+
     }
 
     function checkAnswer(selectedBtn, selectedOption, correctAnswer) {
+
       if (answered) return;
+
       answered = true;
 
-      const options = document.querySelectorAll('.option');
+      const options = document.querySelectorAll(".option");
 
       options.forEach(option => {
+
         if (option.innerText === correctAnswer) {
-          option.classList.add('correct');
+          option.classList.add("correct");
         }
+
       });
 
       if (selectedOption === correctAnswer) {
+
         score++;
+
       } else {
-        selectedBtn.classList.add('wrong');
+
+        selectedBtn.classList.add("wrong");
+
       }
 
-      nextBtn.style.display = 'inline-block';
+      nextBtn.style.display = "block";
+
     }
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener("click", () => {
+
       currentQuestion++;
+
       loadQuestion();
+
     });
 
     function showScore() {
-      quizContainer.innerHTML = `
-        <h2 style="text-align:center;">Quiz Completed!</h2>
+
+      quiz.innerHTML = `
+        <h2>Quiz Completed!</h2>
       `;
 
-      nextBtn.style.display = 'none';
+      nextBtn.style.display = "none";
 
-      scoreContainer.innerHTML = `
+      scoreDiv.innerHTML = `
         Your Score: ${score} / ${questions.length}
       `;
+
     }
+
   </script>
 
 </body>
