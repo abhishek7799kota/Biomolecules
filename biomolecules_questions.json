@@ -1,0 +1,209 @@
+```json
+{
+  "title": "Biomolecules EAPCET MCQs",
+  "part1": [
+    {
+      "question": "Biomolecules are mainly composed of",
+      "options": ["Metals", "Non-metals", "Carbon compounds", "Salts"],
+      "answer": "Carbon compounds"
+    },
+    {
+      "question": "The basic unit of proteins is",
+      "options": ["Fatty acid", "Amino acid", "Nucleotide", "Glucose"],
+      "answer": "Amino acid"
+    },
+    {
+      "question": "Glucose is a",
+      "options": ["Disaccharide", "Polysaccharide", "Monosaccharide", "Lipid"],
+      "answer": "Monosaccharide"
+    },
+    {
+      "question": "The storage carbohydrate in animals is",
+      "options": ["Cellulose", "Glycogen", "Starch", "Chitin"],
+      "answer": "Glycogen"
+    },
+    {
+      "question": "Cellulose is present in",
+      "options": ["Animal cells", "Blood", "Plant cell wall", "Nucleus"],
+      "answer": "Plant cell wall"
+    },
+    {
+      "question": "Peptide bonds are present in",
+      "options": ["Lipids", "Proteins", "Carbohydrates", "Vitamins"],
+      "answer": "Proteins"
+    },
+    {
+      "question": "Enzymes are generally made of",
+      "options": ["Carbohydrates", "Minerals", "Proteins", "Lipids"],
+      "answer": "Proteins"
+    },
+    {
+      "question": "The functional unit of nucleic acids is",
+      "options": ["Amino acid", "Nucleotide", "Fatty acid", "Monomer"],
+      "answer": "Nucleotide"
+    },
+    {
+      "question": "DNA contains the sugar",
+      "options": ["Ribose", "Maltose", "Deoxyribose", "Glucose"],
+      "answer": "Deoxyribose"
+    },
+    {
+      "question": "RNA contains",
+      "options": ["Deoxyribose", "Ribose", "Fructose", "Lactose"],
+      "answer": "Ribose"
+    },
+    {
+      "question": "Lipids are generally",
+      "options": ["Hydrophilic", "Soluble in water", "Hydrophobic", "Acidic"],
+      "answer": "Hydrophobic"
+    },
+    {
+      "question": "The main source of energy in cells is",
+      "options": ["Protein", "Lipid", "Glucose", "Vitamin"],
+      "answer": "Glucose"
+    },
+    {
+      "question": "The bond between monosaccharides is called",
+      "options": ["Peptide bond", "Glycosidic bond", "Hydrogen bond", "Ionic bond"],
+      "answer": "Glycosidic bond"
+    },
+    {
+      "question": "Which of the following is a polysaccharide?",
+      "options": ["Glucose", "Fructose", "Sucrose", "Starch"],
+      "answer": "Starch"
+    },
+    {
+      "question": "The double helix structure is seen in",
+      "options": ["RNA", "Protein", "DNA", "Lipid"],
+      "answer": "DNA"
+    },
+    {
+      "question": "Which biomolecule acts as a biocatalyst?",
+      "options": ["Vitamin", "Enzyme", "Hormone", "Lipid"],
+      "answer": "Enzyme"
+    },
+    {
+      "question": "Hemoglobin is a",
+      "options": ["Carbohydrate", "Protein", "Lipid", "Vitamin"],
+      "answer": "Protein"
+    },
+    {
+      "question": "Phospholipids are important components of",
+      "options": ["Bones", "Cell membrane", "Hair", "Blood plasma"],
+      "answer": "Cell membrane"
+    },
+    {
+      "question": "Which nitrogen base is absent in RNA?",
+      "options": ["Adenine", "Guanine", "Cytosine", "Thymine"],
+      "answer": "Thymine"
+    },
+    {
+      "question": "Denaturation affects the _____ structure of proteins.",
+      "options": ["Primary", "Secondary and tertiary", "Only primary", "Genetic"],
+      "answer": "Secondary and tertiary"
+    }
+  ],
+  "part2": [
+    {
+      "question": "Which biomolecule stores the highest amount of energy?",
+      "options": ["Proteins", "Vitamins", "Lipids", "Minerals"],
+      "answer": "Lipids"
+    },
+    {
+      "question": "Starch is made up of many units of",
+      "options": ["Amino acids", "Glucose", "Fatty acids", "Nucleotides"],
+      "answer": "Glucose"
+    },
+    {
+      "question": "The process of breakdown of complex molecules is called",
+      "options": ["Anabolism", "Catabolism", "Mutation", "Replication"],
+      "answer": "Catabolism"
+    },
+    {
+      "question": "Which one is not a protein?",
+      "options": ["Keratin", "Hemoglobin", "Cholesterol", "Collagen"],
+      "answer": "Cholesterol"
+    },
+    {
+      "question": "The nitrogenous base unique to RNA is",
+      "options": ["Thymine", "Uracil", "Cytosine", "Guanine"],
+      "answer": "Uracil"
+    },
+    {
+      "question": "Enzymes lower the",
+      "options": ["Temperature", "Activation energy", "Pressure", "pH"],
+      "answer": "Activation energy"
+    },
+    {
+      "question": "The tertiary structure of proteins is stabilized mainly by",
+      "options": ["Weak interactions", "Metal bonds", "Ionic crystals", "Nuclear forces"],
+      "answer": "Weak interactions"
+    },
+    {
+      "question": "Which of the following is a disaccharide?",
+      "options": ["Glucose", "Fructose", "Lactose", "Glycogen"],
+      "answer": "Lactose"
+    },
+    {
+      "question": "The monomers of nucleic acids are",
+      "options": ["Amino acids", "Nucleotides", "Fatty acids", "Sugars"],
+      "answer": "Nucleotides"
+    },
+    {
+      "question": "Cholesterol belongs to the group of",
+      "options": ["Proteins", "Carbohydrates", "Steroids", "Vitamins"],
+      "answer": "Steroids"
+    },
+    {
+      "question": "Which vitamin is soluble in fats?",
+      "options": ["Vitamin C", "Vitamin B", "Vitamin D", "Vitamin B12"],
+      "answer": "Vitamin D"
+    },
+    {
+      "question": "ATP is rich in",
+      "options": ["Peptide bonds", "Phosphodiester bonds", "High-energy phosphate bonds", "Glycosidic bonds"],
+      "answer": "High-energy phosphate bonds"
+    },
+    {
+      "question": "The enzyme amylase acts on",
+      "options": ["Protein", "Lipid", "Starch", "DNA"],
+      "answer": "Starch"
+    },
+    {
+      "question": "The shape of an enzyme is related to its",
+      "options": ["Specificity", "Weight", "Size", "Color"],
+      "answer": "Specificity"
+    },
+    {
+      "question": "Which biomolecule contains phosphorus?",
+      "options": ["DNA", "Protein", "Glucose", "Cholesterol"],
+      "answer": "DNA"
+    },
+    {
+      "question": "Ribosomes are mainly involved in",
+      "options": ["Respiration", "Digestion", "Protein synthesis", "Lipid transport"],
+      "answer": "Protein synthesis"
+    },
+    {
+      "question": "Which biomolecule forms hormones like estrogen and testosterone?",
+      "options": ["Carbohydrates", "Steroids", "Proteins", "Vitamins"],
+      "answer": "Steroids"
+    },
+    {
+      "question": "The pH at which an enzyme works best is called",
+      "options": ["Neutral pH", "Optimum pH", "Acidic pH", "Basic pH"],
+      "answer": "Optimum pH"
+    },
+    {
+      "question": "DNA replication occurs in the",
+      "options": ["Cytoplasm", "Ribosome", "Nucleus", "Vacuole"],
+      "answer": "Nucleus"
+    },
+    {
+      "question": "Which of the following is not a biomolecule?",
+      "options": ["Protein", "Lipid", "Sodium chloride", "Nucleic acid"],
+      "answer": "Sodium chloride"
+    }
+  ]
+}
+```
